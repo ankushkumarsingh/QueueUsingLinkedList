@@ -37,6 +37,17 @@ class QueueUsingLinkedList<T>{
     }
   }
   
+  func front() -> T? {
+    return head?.value
+  }
+  
+  func isEmpty() -> Bool {
+    if head == nil && tail == nil {
+      return true
+    }
+    return false
+  }
+  
   func printQueue(){
     var current = head
     while current != nil {
